@@ -9,10 +9,22 @@ case "$1" in
         echo "$QPKG_NAME is disabled."
         exit 1
     fi
+    ln -nfs /opt/bin/git /usr/bin/git
+    ln -nfs /opt/bin/git-cvsserver /usr/bin/git-cvsserver
+    ln -nfs /opt/bin/git-receive-pack /usr/bin/git-receive-pack
+    ln -nfs /opt/bin/git-shell /usr/bin/git-shell
+    ln -nfs /opt/bin/git-upload-archive /usr/bin/git-upload-archive
+    ln -nfs /opt/bin/git-upload-pack /usr/bin/git-upload-pack
     : ADD START ACTIONS HERE
     ;;
-
+    
   stop)
+    rm -f /usr/bin/git
+    rm -f /usr/bin/git-cvsserver
+    rm -f /usr/bin/git-receive-pack
+    rm -f /usr/bin/git-shell
+    rm -f /usr/bin/git-upload-archive
+    rm -f /usr/bin/git-upload-pack
     : ADD STOP ACTIONS HERE
     ;;
 
