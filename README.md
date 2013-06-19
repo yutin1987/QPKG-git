@@ -11,7 +11,7 @@ QPKG
 =========
 QPKG files/applications makes it easy for [QNAP](http://www.qnap.com/) Turbo NAS to install and remove packages.
 
-Download: http://bit.ly/qpkg_git
+Download: http://bit.ly/qpkg_git_1-8-2-3
 
 ========
 ![image](https://github.com/yutin1987/QPKG-git/raw/master/icon/git_640x400.png)
