@@ -142,7 +142,7 @@ PKG_MAIN_REMOVE="{
 pkg_post_install(){
   CONF=/etc/config/qpkg.conf
   QPKG_DIR=$(/sbin/getcfg $QPKG_NAME Install_Path -d "" -f $CONF)
-  if [ $(/usr/bin/expr match $(arch) "arm") -ne 0 ]; then
+  if [ $(expr match "$(cat /proc/cpuinfo)" '.*ARM') -ne 0 ]; then
     echo "CPU is ARM use git_arm"
     $CMD_PKG_TOOL install $QPKG_DIR/git_1.8.2.3-2_arm.ipk
   else
